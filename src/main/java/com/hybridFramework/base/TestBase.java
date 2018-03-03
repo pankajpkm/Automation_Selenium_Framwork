@@ -172,6 +172,11 @@ public class TestBase {
 		System.out.println(OR.toString());
 		return getLocators(OR.getObjectRepositoriesData().getProperty(locator));
 	}
+	public String getConfigProperty(String key){
+		OR =new ObjectRepositories();
+		return OR.getConfigProperty().getProperty(key);
+		
+	}
 	
 	public String[][] getExcelData(String excelFileName, String sheetName){
 		logger.info("Reading Excel data...");
